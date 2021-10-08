@@ -1,4 +1,4 @@
-# Eloquent
+# Laravel
 
 ## Step 1. Clone the repository
 
