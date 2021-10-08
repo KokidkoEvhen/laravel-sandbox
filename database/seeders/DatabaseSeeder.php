@@ -14,11 +14,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $categories = \App\Models\Category::factory()->count(10)->create();
+        $categories = \App\Models\Category::factory()->count(5)->create();
 
-        $tags = \App\Models\Tag::factory()->count(100)->create();
+        $tags = \App\Models\Tag::factory()->count(5)->create();
 
-        $posts = Post::factory()->count(10)->make(['category_id' => null]);
+        $posts = Post::factory()->count(5)->make(['category_id' => null]);
 
         $posts->each(function (Post $post) use ($categories) {
             $post->category()->associate($categories->random());
